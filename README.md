@@ -1,27 +1,32 @@
-# TableauCrossTabExporter
+# Angular Tableau Exporter Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This Angular project embeds a Tableau dashboard into a web application and allows users to export the dashboard data in various formats, including CSV, Excel, Image, PowerPoint, PDF, and raw data.
 
-## Development server
+The Tableau JavaScript API is used to embed the dashboard and export the data. However, the CSV and Excel export methods of the API have different signatures that require the user to click on a dashboard sheet instead of having a dialog box like the other export methods. To solve this problem, this project implements specific functions that use the API methods to scan all dashboard sheets, correctly format the data, and process it.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+When the export button is clicked, a file is generated and made available for download in the selected format. For CSV and Excel formats, a zip file is generated containing one file for each dashboard sheet (CSV) or one tab for each sheet (Excel).
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the Application
 
-## Build
+1. Clone this repository:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    `git clone https://github.com/SEU-USUARIO-GIT/tableau-exporter.git`
 
-## Running unit tests
+1. Install the Angular CLI:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    `npm install -g @angular/cli`
 
-## Running end-to-end tests
+1. Install project dependencies: 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    `npm install`
 
-## Further help
+1. Start the development server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    `ng serve -o`
+
+
+## References
+
+- [GitHub repository for Export to Excel](https://github.com/alexlokhov/export-to-excel/blob/master/xlsx_exporter.html)
+- [Tableau JavaScript API documentation](https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api_ref.htm)
