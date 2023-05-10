@@ -11,7 +11,7 @@ When the export button is clicked, a file is generated and made available for do
 
 1. Clone this repository:
 
-    `git clone https://github.com/SEU-USUARIO-GIT/tableau-exporter.git`
+    `git clone https://github.com/ysmaicon/tableau-exporter.git`
 
 1. Install the Angular CLI:
 
